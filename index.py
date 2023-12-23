@@ -10,6 +10,7 @@ from PyQt5.QtWidgets import QMainWindow, QApplication, QMessageBox
 from threading import Thread
 from need.LoginUI import *
 from need.MainUi import *
+from need.update import *
 
 
 class LoginWindow(QMainWindow):
@@ -23,27 +24,10 @@ class LoginWindow(QMainWindow):
         self.ui.pushButton.clicked.connect(self.go_to_inter)
         self.ui.pushButton_1.clicked.connect(self.register)
         self.show()
-        # 创建两个Thread实例
-        t1 = Thread(target=self.getUsers, args=())
-        # 启动线程运行
-        t1.start()
-        # TODO:添加更新判断/提示/下载
+        UpdateWindows()
 
-    def getUsers(self):
-        url = 'https://hdilp.top/users.zip'
-        out = 'C:/Windows/Temp/'
-        name = wget.download(url, out)
-        print(name)
-        # 读取压缩文件
-        file = zipfile.ZipFile(name)
-        # 解压文件
-        print('开始解压...')
-        file.extractall(out)
-        print('解压结束。')
-        # 关闭文件流
-        file.close()
-        os.remove(name)
-        # TODO：添加更新提示/进度条
+        # TODO:添加版本更新判断/提示/下载
+
 
     def register(self):
         msg_box = QMessageBox(QMessageBox.Information, '提示', '请联系作者')
@@ -166,6 +150,36 @@ class zhuyemian(QMainWindow):
             time.sleep(等待秒数)
         msg_box = QMessageBox(QMessageBox.Information, '提示', '刷屏完成')
         msg_box.exec_()
+
+
+class UpdateWindows(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.ui = Ui_MainWindow_update()
+        self.ui.setupUi(self)
+        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+        self.show()
+        # 创建Thread实例
+        t1 = Thread(target=self.getUpdate, args=())
+        # 启动线程运行
+        t1.start()
+
+    def getUpdate(self):
+        url = 'https://hdilp.top/users.zip'
+        out = 'C:/Windows/Temp/'
+        name = wget.download(url, out)
+        print(name)
+        # 读取压缩文件
+        file = zipfile.ZipFile(name)
+        # 解压文件
+        print('开始解压...')
+        file.extractall(out)
+        print('解压结束。')
+        # 关闭文件流
+        file.close()
+        os.remove(name)
+        self.close()
 
 
 if __name__ == '__main__':
