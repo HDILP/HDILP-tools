@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>resourse/close.png</file>
+    <file>resourse/minus.png</file>
+  </qresource>
+  <qresource prefix="img">
+    <file>resourse/Login_right.jpg</file>
+  </qresource>
+</RCC>
