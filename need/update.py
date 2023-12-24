@@ -21,8 +21,26 @@ class Ui_MainWindow_update(object):
         MainWindow_update.setFont(font)
         self.centralwidget = QtWidgets.QWidget(MainWindow_update)
         self.centralwidget.setObjectName("centralwidget")
-        self.progressBar = QtWidgets.QProgressBar(self.centralwidget)
-        self.progressBar.setGeometry(QtCore.QRect(30, 190, 381, 31))
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(20, 30, 411, 231))
+        self.label_2.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"\n"
+"border-top-left-radius:30px;\n"
+"border-bottom-left-radius:30px;\n"
+"border-top-right-radius:30px;\n"
+"border-bottom-right-radius:30px;")
+        self.label_2.setText("")
+        self.label_2.setObjectName("label_2")
+        self.stackedWidget = QtWidgets.QStackedWidget(self.centralwidget)
+        self.stackedWidget.setGeometry(QtCore.QRect(30, 50, 391, 201))
+        self.stackedWidget.setObjectName("stackedWidget")
+        self.page = QtWidgets.QWidget()
+        self.page.setObjectName("page")
+        self.label = QtWidgets.QLabel(self.page)
+        self.label.setGeometry(QtCore.QRect(10, 20, 211, 31))
+        self.label.setObjectName("label")
+        self.progressBar = QtWidgets.QProgressBar(self.page)
+        self.progressBar.setGeometry(QtCore.QRect(0, 140, 381, 31))
         self.progressBar.setLayoutDirection(QtCore.Qt.RightToLeft)
         self.progressBar.setMaximum(0)
         self.progressBar.setProperty("value", -1)
@@ -31,23 +49,34 @@ class Ui_MainWindow_update(object):
         self.progressBar.setInvertedAppearance(True)
         self.progressBar.setTextDirection(QtWidgets.QProgressBar.TopToBottom)
         self.progressBar.setObjectName("progressBar")
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(30, 60, 211, 31))
-        self.label.setObjectName("label")
-        self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(20, 30, 411, 231))
-        self.label_2.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.label_2.setText("")
-        self.label_2.setObjectName("label_2")
+        self.stackedWidget.addWidget(self.page)
+        self.page_2 = QtWidgets.QWidget()
+        self.page_2.setObjectName("page_2")
+        self.label_4 = QtWidgets.QLabel(self.page_2)
+        self.label_4.setGeometry(QtCore.QRect(10, 20, 211, 31))
+        self.label_4.setObjectName("label_4")
+        self.stackedWidget.addWidget(self.page_2)
+        self.label_3 = QtWidgets.QLabel(self.centralwidget)
+        self.label_3.setGeometry(QtCore.QRect(10, 40, 411, 231))
+        self.label_3.setStyleSheet("background-color: rgba(0, 0, 0,50);\n"
+"\n"
+"border-top-left-radius:30px;\n"
+"border-bottom-left-radius:30px;\n"
+"border-top-right-radius:30px;\n"
+"border-bottom-right-radius:30px;")
+        self.label_3.setText("")
+        self.label_3.setObjectName("label_3")
+        self.label_3.raise_()
         self.label_2.raise_()
-        self.progressBar.raise_()
-        self.label.raise_()
+        self.stackedWidget.raise_()
         MainWindow_update.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow_update)
+        self.stackedWidget.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow_update)
 
     def retranslateUi(self, MainWindow_update):
         _translate = QtCore.QCoreApplication.translate
         MainWindow_update.setWindowTitle(_translate("MainWindow_update", "MainWindow"))
         self.label.setText(_translate("MainWindow_update", "获取更新中……"))
+        self.label_4.setText(_translate("MainWindow_update", "更新失败 :("))

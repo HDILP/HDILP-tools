@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1436</width>
-    <height>600</height>
+    <width>843</width>
+    <height>514</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,8 +17,8 @@
    <widget class="QLabel" name="left">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>20</y>
+      <x>10</x>
+      <y>10</y>
       <width>340</width>
       <height>490</height>
      </rect>
@@ -35,11 +35,17 @@ border-bottom-left-radius:30px;</string>
    <widget class="QLabel" name="right">
     <property name="geometry">
      <rect>
-      <x>380</x>
-      <y>20</y>
-      <width>491</width>
-      <height>491</height>
+      <x>350</x>
+      <y>10</y>
+      <width>490</width>
+      <height>490</height>
      </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>490</height>
+     </size>
     </property>
     <property name="styleSheet">
      <string notr="true">border-image: url(:/resourse/resourse/right.jpg);
@@ -53,8 +59,8 @@ border-bottom-right-radius:30px;</string>
    <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
-      <x>480</x>
-      <y>160</y>
+      <x>450</x>
+      <y>150</y>
       <width>284</width>
       <height>41</height>
      </rect>
@@ -127,14 +133,15 @@ border-bottom-right-radius:30px;</string>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>70</y>
+      <x>490</x>
+      <y>60</y>
       <width>211</width>
       <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>幼圆</family>
       <pointsize>32</pointsize>
      </font>
     </property>
@@ -145,8 +152,8 @@ border-bottom-right-radius:30px;</string>
    <widget class="QPushButton" name="close">
     <property name="geometry">
      <rect>
-      <x>810</x>
-      <y>40</y>
+      <x>780</x>
+      <y>30</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -161,8 +168,8 @@ border-bottom-right-radius:30px;</string>
    <widget class="QPushButton" name="minsite">
     <property name="geometry">
      <rect>
-      <x>770</x>
-      <y>40</y>
+      <x>740</x>
+      <y>30</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -177,8 +184,8 @@ border-bottom-right-radius:30px;</string>
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>390</x>
-      <y>210</y>
+      <x>360</x>
+      <y>200</y>
       <width>471</width>
       <height>291</height>
      </rect>
@@ -405,6 +412,28 @@ border-radius:8px</string>
      </widget>
     </widget>
    </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>20</y>
+      <width>830</width>
+      <height>490</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0,50);
+
+border-top-left-radius:30px;
+border-bottom-left-radius:30px;
+border-top-right-radius:30px;
+border-bottom-right-radius:30px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>label_2</zorder>
    <zorder>right</zorder>
    <zorder>left</zorder>
    <zorder>widget</zorder>

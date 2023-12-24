@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '主页面.ui'
+# Form implementation generated from reading ui file 'MainUi.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -14,25 +14,26 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow_zhuyemian(object):
     def setupUi(self, MainWindow_zhuyemian):
         MainWindow_zhuyemian.setObjectName("MainWindow_zhuyemian")
-        MainWindow_zhuyemian.resize(1436, 600)
+        MainWindow_zhuyemian.resize(843, 514)
         self.centralwidget = QtWidgets.QWidget(MainWindow_zhuyemian)
         self.centralwidget.setObjectName("centralwidget")
         self.left = QtWidgets.QLabel(self.centralwidget)
-        self.left.setGeometry(QtCore.QRect(40, 20, 340, 490))
+        self.left.setGeometry(QtCore.QRect(10, 10, 340, 490))
         self.left.setStyleSheet("border-image: url(:/resourse/resourse/left.jpg);\n"
 "border-top-left-radius:30px;\n"
 "border-bottom-left-radius:30px;")
         self.left.setText("")
         self.left.setObjectName("left")
         self.right = QtWidgets.QLabel(self.centralwidget)
-        self.right.setGeometry(QtCore.QRect(380, 20, 491, 491))
+        self.right.setGeometry(QtCore.QRect(350, 10, 490, 490))
+        self.right.setMaximumSize(QtCore.QSize(16777215, 490))
         self.right.setStyleSheet("border-image: url(:/resourse/resourse/right.jpg);\n"
 "border-top-right-radius:30px;\n"
 "border-bottom-right-radius:30px;")
         self.right.setText("")
         self.right.setObjectName("right")
         self.widget = QtWidgets.QWidget(self.centralwidget)
-        self.widget.setGeometry(QtCore.QRect(480, 160, 284, 41))
+        self.widget.setGeometry(QtCore.QRect(450, 150, 284, 41))
         self.widget.setObjectName("widget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.widget)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
@@ -76,23 +77,24 @@ class Ui_MainWindow_zhuyemian(object):
         self.pushButton_3.setObjectName("pushButton_3")
         self.horizontalLayout.addWidget(self.pushButton_3)
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(520, 70, 211, 61))
+        self.label.setGeometry(QtCore.QRect(490, 60, 211, 61))
         font = QtGui.QFont()
+        font.setFamily("幼圆")
         font.setPointSize(32)
         self.label.setFont(font)
         self.label.setObjectName("label")
         self.close = QtWidgets.QPushButton(self.centralwidget)
-        self.close.setGeometry(QtCore.QRect(810, 40, 31, 31))
+        self.close.setGeometry(QtCore.QRect(780, 30, 31, 31))
         self.close.setStyleSheet("border-image: url(:/resourse/resourse/close.png);")
         self.close.setText("")
         self.close.setObjectName("close")
         self.minsite = QtWidgets.QPushButton(self.centralwidget)
-        self.minsite.setGeometry(QtCore.QRect(770, 40, 31, 31))
+        self.minsite.setGeometry(QtCore.QRect(740, 30, 31, 31))
         self.minsite.setStyleSheet("border-image: url(:/resourse/resourse/minus.png);")
         self.minsite.setText("")
         self.minsite.setObjectName("minsite")
         self.stackedWidget = QtWidgets.QStackedWidget(self.centralwidget)
-        self.stackedWidget.setGeometry(QtCore.QRect(390, 210, 471, 291))
+        self.stackedWidget.setGeometry(QtCore.QRect(360, 200, 471, 291))
         self.stackedWidget.setObjectName("stackedWidget")
         self.page = QtWidgets.QWidget()
         self.page.setObjectName("page")
@@ -174,6 +176,17 @@ class Ui_MainWindow_zhuyemian(object):
 "}")
         self.pushButton_6.setObjectName("pushButton_6")
         self.stackedWidget.addWidget(self.page_3)
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(0, 20, 830, 490))
+        self.label_2.setStyleSheet("background-color: rgba(0, 0, 0,50);\n"
+"\n"
+"border-top-left-radius:30px;\n"
+"border-bottom-left-radius:30px;\n"
+"border-top-right-radius:30px;\n"
+"border-bottom-right-radius:30px;")
+        self.label_2.setText("")
+        self.label_2.setObjectName("label_2")
+        self.label_2.raise_()
         self.right.raise_()
         self.left.raise_()
         self.widget.raise_()

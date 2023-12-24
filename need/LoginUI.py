@@ -14,14 +14,14 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1078, 600)
+        MainWindow.resize(866, 519)
         font = QtGui.QFont()
         font.setFamily("幼圆")
         MainWindow.setFont(font)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.left = QtWidgets.QLabel(self.centralwidget)
-        self.left.setGeometry(QtCore.QRect(30, 80, 340, 491))
+        self.left.setGeometry(QtCore.QRect(20, 10, 340, 490))
         self.left.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "\n"
 "border-top-left-radius:30px;\n"
@@ -29,7 +29,7 @@ class Ui_MainWindow(object):
         self.left.setText("")
         self.left.setObjectName("left")
         self.right = QtWidgets.QLabel(self.centralwidget)
-        self.right.setGeometry(QtCore.QRect(370, 80, 490, 490))
+        self.right.setGeometry(QtCore.QRect(360, 10, 490, 490))
         self.right.setStyleSheet("border-image: url(:/img/resourse/Login_right.jpg);\n"
 "border-top-right-radius:30px;\n"
 "border-bottom-right-radius:30px;\n"
@@ -37,7 +37,7 @@ class Ui_MainWindow(object):
         self.right.setText("")
         self.right.setObjectName("right")
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(370, 80, 490, 490))
+        self.label_3.setGeometry(QtCore.QRect(360, 10, 490, 490))
         self.label_3.setStyleSheet("background-color:rgba(0,0,0,100);\n"
 "\n"
 "border-top-right-radius:30px;\n"
@@ -45,14 +45,14 @@ class Ui_MainWindow(object):
         self.label_3.setText("")
         self.label_3.setObjectName("label_3")
         self.title = QtWidgets.QLabel(self.centralwidget)
-        self.title.setGeometry(QtCore.QRect(150, 140, 88, 43))
+        self.title.setGeometry(QtCore.QRect(140, 70, 88, 43))
         font = QtGui.QFont()
         font.setFamily("幼圆")
         font.setPointSize(32)
         self.title.setFont(font)
         self.title.setObjectName("title")
         self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit.setGeometry(QtCore.QRect(90, 230, 211, 41))
+        self.lineEdit.setGeometry(QtCore.QRect(80, 160, 211, 41))
         font = QtGui.QFont()
         font.setFamily("SimSun")
         font.setPointSize(12)
@@ -63,7 +63,7 @@ class Ui_MainWindow(object):
         self.lineEdit.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
         self.lineEdit.setObjectName("lineEdit")
         self.lineEdit_2 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_2.setGeometry(QtCore.QRect(90, 330, 211, 41))
+        self.lineEdit_2.setGeometry(QtCore.QRect(80, 260, 211, 41))
         font = QtGui.QFont()
         font.setFamily("SimSun")
         font.setPointSize(12)
@@ -75,7 +75,7 @@ class Ui_MainWindow(object):
         self.lineEdit_2.setEchoMode(QtWidgets.QLineEdit.Password)
         self.lineEdit_2.setObjectName("lineEdit_2")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(210, 450, 101, 51))
+        self.pushButton.setGeometry(QtCore.QRect(200, 380, 101, 51))
         self.pushButton.setStyleSheet("QPushButton{\n"
 "    background-color:qlineargradient(spradient:pad,x1:0,y1:0,x2:1,y2:1,stop:0\n"
 "rgba(102,133,156,255),stop:1 rgba(117,255,201,255));\n"
@@ -87,35 +87,35 @@ class Ui_MainWindow(object):
 "}")
         self.pushButton.setObjectName("pushButton")
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(740, 100, 32, 32))
+        self.pushButton_2.setGeometry(QtCore.QRect(730, 30, 32, 32))
         self.pushButton_2.setStyleSheet("border-image: url(:/icon/resourse/minus.png);\n"
-"background-color: rgb(255, 255, 255);\n"
+"background-color: rgba(255, 255, 255,50);\n"
 "border-radius:8px;")
         self.pushButton_2.setText("")
         self.pushButton_2.setObjectName("pushButton_2")
         self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_3.setGeometry(QtCore.QRect(780, 100, 32, 32))
+        self.pushButton_3.setGeometry(QtCore.QRect(770, 30, 32, 32))
         self.pushButton_3.setStyleSheet("border-image: url(:/icon/resourse/close.png);\n"
-"background-color: rgb(255, 255, 255);\n"
+"background-color: rgba(255, 255, 255,50);\n"
 "border-radius:8px;")
         self.pushButton_3.setText("")
         self.pushButton_3.setObjectName("pushButton_3")
         self.label_5 = QtWidgets.QLabel(self.centralwidget)
-        self.label_5.setGeometry(QtCore.QRect(410, 150, 351, 81))
+        self.label_5.setGeometry(QtCore.QRect(400, 80, 351, 81))
         font = QtGui.QFont()
         font.setFamily("幼圆")
         font.setPointSize(25)
         self.label_5.setFont(font)
         self.label_5.setObjectName("label_5")
         self.label_6 = QtWidgets.QLabel(self.centralwidget)
-        self.label_6.setGeometry(QtCore.QRect(410, 210, 351, 81))
+        self.label_6.setGeometry(QtCore.QRect(400, 140, 351, 81))
         font = QtGui.QFont()
         font.setFamily("幼圆")
         font.setPointSize(25)
         self.label_6.setFont(font)
         self.label_6.setObjectName("label_6")
         self.pushButton_1 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_1.setGeometry(QtCore.QRect(90, 450, 101, 51))
+        self.pushButton_1.setGeometry(QtCore.QRect(80, 380, 101, 51))
         self.pushButton_1.setStyleSheet("QPushButton{\n"
 "    background-color:qlineargradient(spradient:pad,x1:0,y1:0,x2:1,y2:1,stop:0\n"
 "rgba(248,187,208,255),stop:1 rgba(187,222,251,255));\n"
@@ -127,6 +127,29 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         self.pushButton_1.setObjectName("pushButton_1")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(10, 20, 830, 490))
+        self.label.setStyleSheet("background-color: rgba(0, 0, 0,50);\n"
+"\n"
+"border-top-left-radius:30px;\n"
+"border-bottom-left-radius:30px;\n"
+"border-top-right-radius:30px;\n"
+"border-bottom-right-radius:30px;")
+        self.label.setText("")
+        self.label.setObjectName("label")
+        self.label.raise_()
+        self.left.raise_()
+        self.right.raise_()
+        self.label_3.raise_()
+        self.title.raise_()
+        self.lineEdit.raise_()
+        self.lineEdit_2.raise_()
+        self.pushButton.raise_()
+        self.pushButton_2.raise_()
+        self.pushButton_3.raise_()
+        self.label_5.raise_()
+        self.label_6.raise_()
+        self.pushButton_1.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
