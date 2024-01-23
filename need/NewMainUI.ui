@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>980</width>
-    <height>560</height>
+    <width>984</width>
+    <height>563</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,6 +22,11 @@
       <width>960</width>
       <height>540</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>OPlusSans 3.0</family>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(92, 170, 255, 255), stop:1 rgba(255, 170, 255, 255));
@@ -44,6 +49,11 @@ border-bottom-right-radius:20px;</string>
       <height>560</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>OPlusSans 3.0</family>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgba(0, 0, 0,30);
 
@@ -65,6 +75,11 @@ border-bottom-right-radius:20px;</string>
       <height>70</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>OPlusSans 3.0</family>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgba(255, 255, 255,40);
 border-top-left-radius:20px;
@@ -84,6 +99,11 @@ border-bottom-right-radius:20px;</string>
       <width>960</width>
       <height>3</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>OPlusSans 3.0</family>
+     </font>
     </property>
     <property name="layoutDirection">
      <enum>Qt::LeftToRight</enum>
@@ -121,6 +141,11 @@ border-bottom-right-radius:20px;</string>
       <width>141</width>
       <height>470</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>OPlusSans 3.0</family>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgba(255, 255, 255,50);
@@ -237,6 +262,11 @@ text-align:left</string>
       <height>24</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>OPlusSans 3.0</family>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">border-image: url(:/icons/icons/remove_FILL0_wght400_GRAD0_opsz24.png);</string>
     </property>
@@ -252,6 +282,11 @@ text-align:left</string>
       <width>24</width>
       <height>24</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>OPlusSans 3.0</family>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">border-image: url(:/icons/icons/close_FILL0_wght400_GRAD0_opsz24.png);</string>
@@ -290,15 +325,20 @@ text-align:left</string>
       <height>451</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>OPlusSans 3.0</family>
+     </font>
+    </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QLabel" name="label_5">
       <property name="geometry">
        <rect>
         <x>70</x>
-        <y>30</y>
+        <y>10</y>
         <width>681</width>
         <height>341</height>
        </rect>
@@ -331,26 +371,123 @@ border-bottom-right-radius:20px;</string>
      </widget>
     </widget>
     <widget class="QWidget" name="page_2">
+     <widget class="QWidget" name="widget_2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>40</y>
+        <width>330</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>OPlusSans 3.0</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="pushButton_1">
+         <property name="font">
+          <font>
+           <family>OPlusSans 3.0</family>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#pushButton_1{
+	border:none;
+	border:1px solid rgba(0,0,0,50);
+	border-radius:6px
+}
+#pushButton_1:focus{
+	color:rgb(111,111,111);
+}</string>
+         </property>
+         <property name="text">
+          <string>刷剪贴板</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="font">
+          <font>
+           <family>OPlusSans 3.0</family>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#pushButton_2{
+	border:none;
+	border:1px solid rgba(0,0,0,50);
+	border-radius:6px
+}
+#pushButton_2:focus{
+	color:rgb(111,111,111);
+}</string>
+         </property>
+         <property name="text">
+          <string>刷指定内容</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="font">
+          <font>
+           <family>OPlusSans 3.0</family>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#pushButton_3{
+	border:none;
+	border:1px solid rgba(0,0,0,50);
+	border-radius:6px
+}
+#pushButton_3:focus{
+	color:rgb(111,111,111);
+}</string>
+         </property>
+         <property name="text">
+          <string> 刷表情包（连点）</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
      <widget class="QStackedWidget" name="stackedWidget_2">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>180</x>
         <y>130</y>
-        <width>781</width>
-        <height>311</height>
+        <width>471</width>
+        <height>291</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>OPlusSans 3.0</family>
+       </font>
       </property>
       <property name="currentIndex">
        <number>0</number>
       </property>
       <widget class="QWidget" name="page_3">
-       <widget class="QWidget" name="widget" native="true">
+       <widget class="QWidget" name="widget_3" native="true">
         <property name="geometry">
          <rect>
-          <x>230</x>
+          <x>70</x>
           <y>10</y>
-          <width>321</width>
-          <height>261</height>
+          <width>330</width>
+          <height>260</height>
          </rect>
         </property>
         <widget class="QLineEdit" name="lineEdit">
@@ -361,6 +498,11 @@ border-bottom-right-radius:20px;</string>
            <width>320</width>
            <height>40</height>
           </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>OPlusSans 3.0</family>
+          </font>
          </property>
          <property name="styleSheet">
           <string notr="true">border:1px solid rgb(0,0,0);
@@ -379,6 +521,11 @@ border-radius:8px</string>
            <height>40</height>
           </rect>
          </property>
+         <property name="font">
+          <font>
+           <family>OPlusSans 3.0</family>
+          </font>
+         </property>
          <property name="styleSheet">
           <string notr="true">border:1px solid rgb(0,0,0);
 border-radius:8px</string>
@@ -387,7 +534,7 @@ border-radius:8px</string>
           <string>停顿时间</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="shuaping_start">
+        <widget class="QPushButton" name="pushButton_4">
          <property name="geometry">
           <rect>
            <x>10</x>
@@ -395,6 +542,11 @@ border-radius:8px</string>
            <width>301</width>
            <height>51</height>
           </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>OPlusSans 3.0</family>
+          </font>
          </property>
          <property name="styleSheet">
           <string notr="true">#pushButton_4{
@@ -410,81 +562,197 @@ border-radius:8px</string>
         </widget>
        </widget>
       </widget>
-      <widget class="QWidget" name="page_4"/>
-     </widget>
-     <widget class="QWidget" name="widget_2" native="true">
-      <property name="geometry">
-       <rect>
-        <x>260</x>
-        <y>40</y>
-        <width>284</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <property name="spacing">
-        <number>0</number>
-       </property>
-       <item>
-        <widget class="QPushButton" name="pushButton_1">
+      <widget class="QWidget" name="page_4">
+       <widget class="QWidget" name="widget_4" native="true">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>10</y>
+          <width>331</width>
+          <height>251</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>OPlusSans 3.0</family>
+         </font>
+        </property>
+        <widget class="QLineEdit" name="lineEdit_3">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>320</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>OPlusSans 3.0</family>
+          </font>
+         </property>
          <property name="styleSheet">
-          <string notr="true">#pushButton_1{
-	border:none;
-}
-#pushButton_1:focus{
-	color:rgb(111,111,111);
+          <string notr="true">border:1px solid rgb(0,0,0);
+border-radius:8px</string>
+         </property>
+         <property name="placeholderText">
+          <string>刷屏内容</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_4">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>60</y>
+           <width>320</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>OPlusSans 3.0</family>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border:1px solid rgb(0,0,0);
+border-radius:8px</string>
+         </property>
+         <property name="placeholderText">
+          <string>刷屏次数</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_5">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>120</y>
+           <width>320</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>OPlusSans 3.0</family>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border:1px solid rgb(0,0,0);
+border-radius:8px</string>
+         </property>
+         <property name="placeholderText">
+          <string>停顿时间</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_5">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>190</y>
+           <width>301</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>OPlusSans 3.0</family>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#pushButton_5{
+	
+	background-color: rgb(255, 255, 255);
+	border:2px solid rgb(0,0,0);
+	border-radius:8px;
 }</string>
          </property>
          <property name="text">
-          <string>刷剪贴板</string>
+          <string>开始刷屏</string>
          </property>
         </widget>
-       </item>
-       <item>
-        <widget class="Line" name="line">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_5">
+       <widget class="QWidget" name="widget_5" native="true">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>10</y>
+          <width>331</width>
+          <height>251</height>
+         </rect>
+        </property>
+        <widget class="QLineEdit" name="lineEdit_7">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>320</width>
+           <height>40</height>
+          </rect>
          </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_2">
+         <property name="font">
+          <font>
+           <family>OPlusSans 3.0</family>
+          </font>
+         </property>
          <property name="styleSheet">
-          <string notr="true">#pushButton_2{
-	border:none;
-}
-#pushButton_2:focus{
-	color:rgb(111,111,111);
+          <string notr="true">border:1px solid rgb(0,0,0);
+border-radius:8px</string>
+         </property>
+         <property name="placeholderText">
+          <string>刷屏次数</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_8">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>85</y>
+           <width>320</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>OPlusSans 3.0</family>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border:1px solid rgb(0,0,0);
+border-radius:8px</string>
+         </property>
+         <property name="placeholderText">
+          <string>停顿时间</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_6">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>190</y>
+           <width>301</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>OPlusSans 3.0</family>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#pushButton_6{
+	
+	background-color: rgb(255, 255, 255);
+	border:2px solid rgb(0,0,0);
+	border-radius:8px;
 }</string>
          </property>
          <property name="text">
-          <string>刷指定内容</string>
+          <string>开始刷屏</string>
          </property>
         </widget>
-       </item>
-       <item>
-        <widget class="Line" name="line_2">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_3">
-         <property name="styleSheet">
-          <string notr="true">#pushButton_3{
-	border:none;
-}
-#pushButton_3:focus{
-	color:rgb(111,111,111);
-}</string>
-         </property>
-         <property name="text">
-          <string> 刷表情包（连点）</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
+       </widget>
+      </widget>
      </widget>
     </widget>
    </widget>
