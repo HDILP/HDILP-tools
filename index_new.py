@@ -2,12 +2,12 @@ import sys
 import time
 import pyperclip
 import pyautogui
-import os
-import wget
-import zipfile
+# import os
+# import wget
+# import zipfile
 
 from PyQt5.QtWidgets import QMainWindow, QApplication, QMessageBox
-from threading import Thread
+# from threading import Thread
 from need.NewMainUI import *
 
 
