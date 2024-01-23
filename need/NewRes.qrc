@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/sort_FILL0_wght400_GRAD0_opsz24.png</file>
+    <file>icons/home_FILL0_wght400_GRAD0_opsz24.png</file>
+    <file>icons/close_FILL0_wght400_GRAD0_opsz24.png</file>
+    <file>icons/done_all_FILL0_wght400_GRAD0_opsz24.png</file>
+    <file>icons/login_FILL0_wght400_GRAD0_opsz24.png</file>
+    <file>icons/menu_FILL0_wght400_GRAD0_opsz24.png</file>
+    <file>icons/menu_open_FILL0_wght400_GRAD0_opsz24.png</file>
+    <file>icons/remove_FILL0_wght400_GRAD0_opsz24.png</file>
+    <file>icons/settings_FILL0_wght400_GRAD0_opsz24.png</file>
+  </qresource>
+</RCC>
