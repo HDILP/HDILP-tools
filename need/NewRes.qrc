@@ -10,4 +10,7 @@
     <file>icons/remove_FILL0_wght400_GRAD0_opsz24.png</file>
     <file>icons/settings_FILL0_wght400_GRAD0_opsz24.png</file>
   </qresource>
+  <qresource prefix="font">
+    <file>icons/OPlusSans3-Regular.ttf</file>
+  </qresource>
 </RCC>
