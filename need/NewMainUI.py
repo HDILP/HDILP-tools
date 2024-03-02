@@ -61,7 +61,11 @@ class Ui_MainWindow(object):
         font.setFamily("OPlusSans 3.0")
         self.progressBar.setFont(font)
         self.progressBar.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.progressBar.setStyleSheet("QProgressBar { border: 2px; border-radius: 5px; background-color: #b3e5fc; text-align: center;}QProgressBar::chunk {background:QLinearGradient(x1:0,y1:0,x2:2,y2:0,stop:0 #b3e5fc,stop:1  #f06292); }")
+        self.progressBar.setStyleSheet("QProgressBar { border: 2px; border-radius: 5px; background-color: #b3e5fc; text-align: center;}\n"
+"QProgressBar::chunk{\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #b3e5fc, stop:1 rgb(255, 184, 210));\n"
+"\n"
+"}")
         self.progressBar.setMinimum(0)
         self.progressBar.setMaximum(0)
         self.progressBar.setProperty("value", -1)
@@ -71,7 +75,7 @@ class Ui_MainWindow(object):
         self.progressBar.setFormat("")
         self.progressBar.setObjectName("progressBar")
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(10, 80, 141, 470))
+        self.label_3.setGeometry(QtCore.QRect(10, 80, 140, 470))
         font = QtGui.QFont()
         font.setFamily("OPlusSans 3.0")
         self.label_3.setFont(font)
@@ -153,7 +157,7 @@ class Ui_MainWindow(object):
         self.title.setFont(font)
         self.title.setObjectName("title")
         self.stackedWidget = QtWidgets.QStackedWidget(self.centralwidget)
-        self.stackedWidget.setGeometry(QtCore.QRect(160, 90, 801, 451))
+        self.stackedWidget.setGeometry(QtCore.QRect(150, 80, 821, 471))
         font = QtGui.QFont()
         font.setFamily("OPlusSans 3.0")
         self.stackedWidget.setFont(font)
@@ -161,7 +165,7 @@ class Ui_MainWindow(object):
         self.page = QtWidgets.QWidget()
         self.page.setObjectName("page")
         self.label_5 = QtWidgets.QLabel(self.page)
-        self.label_5.setGeometry(QtCore.QRect(100, 20, 600, 250))
+        self.label_5.setGeometry(QtCore.QRect(100, 80, 600, 250))
         font = QtGui.QFont()
         font.setFamily("OPlusSans 3.0")
         font.setPointSize(20)
@@ -181,61 +185,66 @@ class Ui_MainWindow(object):
         self.page_2 = QtWidgets.QWidget()
         self.page_2.setObjectName("page_2")
         self.widget_2 = QtWidgets.QWidget(self.page_2)
-        self.widget_2.setGeometry(QtCore.QRect(250, 40, 330, 41))
+        self.widget_2.setGeometry(QtCore.QRect(0, 0, 141, 471))
         font = QtGui.QFont()
         font.setFamily("OPlusSans 3.0")
         self.widget_2.setFont(font)
-        self.widget_2.setStyleSheet("")
+        self.widget_2.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.widget_2.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.widget_2.setAutoFillBackground(False)
+        self.widget_2.setStyleSheet("background-color: rgba(255, 255, 255,50);\n"
+"border:1px;\n"
+"border-radius:8px;")
         self.widget_2.setObjectName("widget_2")
-        self.horizontalLayout = QtWidgets.QHBoxLayout(self.widget_2)
-        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout.setSpacing(0)
-        self.horizontalLayout.setObjectName("horizontalLayout")
-        self.pushButton_1 = QtWidgets.QPushButton(self.widget_2)
-        font = QtGui.QFont()
-        font.setFamily("OPlusSans 3.0")
-        self.pushButton_1.setFont(font)
-        self.pushButton_1.setStyleSheet("#pushButton_1{\n"
-"    border:none;\n"
-"    border:1px solid rgba(0,0,0,50);\n"
-"    border-radius:6px\n"
-"}\n"
-"#pushButton_1:focus{\n"
-"    color:rgb(111,111,111);\n"
-"}")
-        self.pushButton_1.setObjectName("pushButton_1")
-        self.horizontalLayout.addWidget(self.pushButton_1)
-        self.pushButton_2 = QtWidgets.QPushButton(self.widget_2)
-        font = QtGui.QFont()
-        font.setFamily("OPlusSans 3.0")
-        self.pushButton_2.setFont(font)
-        self.pushButton_2.setStyleSheet("#pushButton_2{\n"
-"    border:none;\n"
-"    border:1px solid rgba(0,0,0,50);\n"
-"    border-radius:6px\n"
-"}\n"
-"#pushButton_2:focus{\n"
-"    color:rgb(111,111,111);\n"
-"}")
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.horizontalLayout.addWidget(self.pushButton_2)
         self.pushButton_3 = QtWidgets.QPushButton(self.widget_2)
         self.pushButton_3.setEnabled(True)
+        self.pushButton_3.setGeometry(QtCore.QRect(20, 30, 101, 30))
+        self.pushButton_3.setMinimumSize(QtCore.QSize(100, 30))
         font = QtGui.QFont()
         font.setFamily("OPlusSans 3.0")
         self.pushButton_3.setFont(font)
         self.pushButton_3.setStyleSheet("#pushButton_3{\n"
-"    border:none;\n"
-"    border:1px solid rgba(0,0,0,50);\n"
-"    border-radius:6px\n"
+"background-color: rgba(255, 255, 255,75);\n"
+"border-radius:6px;\n"
+"text-align:left\n"
 "}\n"
 "#pushButton_3:focus{\n"
 "    color:rgb(111,111,111);\n"
 "}")
         self.pushButton_3.setObjectName("pushButton_3")
-        self.horizontalLayout.addWidget(self.pushButton_3)
+        self.pushButton_1 = QtWidgets.QPushButton(self.widget_2)
+        self.pushButton_1.setGeometry(QtCore.QRect(20, 130, 100, 30))
+        self.pushButton_1.setMinimumSize(QtCore.QSize(100, 30))
+        font = QtGui.QFont()
+        font.setFamily("OPlusSans 3.0")
+        self.pushButton_1.setFont(font)
+        self.pushButton_1.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.pushButton_1.setStyleSheet("#pushButton_1{\n"
+"background-color: rgba(255, 255, 255,75);\n"
+"border-radius:6px;\n"
+"text-align:left\n"
+"}\n"
+"#pushButton_1:focus{\n"
+"    color:rgb(111,111,111);\n"
+"}")
+        self.pushButton_1.setObjectName("pushButton_1")
+        self.pushButton_2 = QtWidgets.QPushButton(self.widget_2)
+        self.pushButton_2.setGeometry(QtCore.QRect(20, 80, 100, 30))
+        self.pushButton_2.setMinimumSize(QtCore.QSize(100, 30))
+        font = QtGui.QFont()
+        font.setFamily("OPlusSans 3.0")
+        self.pushButton_2.setFont(font)
+        self.pushButton_2.setStyleSheet("#pushButton_2{\n"
+"    background-color: rgba(255, 255, 255,75);\n"
+"    border-radius:6px;\n"
+"    text-align:left\n"
+"}\n"
+"#pushButton_2:focus{\n"
+"    color:rgb(111,111,111);\n"
+"}")
+        self.pushButton_2.setObjectName("pushButton_2")
         self.stackedWidget_2 = QtWidgets.QStackedWidget(self.page_2)
-        self.stackedWidget_2.setGeometry(QtCore.QRect(180, 130, 471, 281))
+        self.stackedWidget_2.setGeometry(QtCore.QRect(210, 100, 471, 321))
         font = QtGui.QFont()
         font.setFamily("OPlusSans 3.0")
         self.stackedWidget_2.setFont(font)
@@ -255,7 +264,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("OPlusSans 3.0")
         self.lineEdit.setFont(font)
-        self.lineEdit.setStyleSheet("border:1px solid rgb(0,0,0);\n"
+        self.lineEdit.setStyleSheet("\n"
 "border-radius:8px")
         self.lineEdit.setObjectName("lineEdit")
         self.lineEdit_2 = QtWidgets.QLineEdit(self.widget_3)
@@ -263,7 +272,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("OPlusSans 3.0")
         self.lineEdit_2.setFont(font)
-        self.lineEdit_2.setStyleSheet("border:1px solid rgb(0,0,0);\n"
+        self.lineEdit_2.setStyleSheet("\n"
 "border-radius:8px")
         self.lineEdit_2.setObjectName("lineEdit_2")
         self.pushButton_4 = QtWidgets.QPushButton(self.widget_3)
@@ -274,7 +283,6 @@ class Ui_MainWindow(object):
         self.pushButton_4.setStyleSheet("#pushButton_4{\n"
 "    \n"
 "    background-color: rgb(255, 255, 255);\n"
-"    border:2px solid rgb(0,0,0);\n"
 "    border-radius:8px;\n"
 "}")
         self.pushButton_4.setObjectName("pushButton_4")
@@ -282,7 +290,7 @@ class Ui_MainWindow(object):
         self.page_4 = QtWidgets.QWidget()
         self.page_4.setObjectName("page_4")
         self.widget_4 = QtWidgets.QWidget(self.page_4)
-        self.widget_4.setGeometry(QtCore.QRect(70, 10, 331, 251))
+        self.widget_4.setGeometry(QtCore.QRect(70, 10, 321, 251))
         font = QtGui.QFont()
         font.setFamily("OPlusSans 3.0")
         self.widget_4.setFont(font)
@@ -292,7 +300,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("OPlusSans 3.0")
         self.lineEdit_3.setFont(font)
-        self.lineEdit_3.setStyleSheet("border:1px solid rgb(0,0,0);\n"
+        self.lineEdit_3.setStyleSheet("\n"
 "border-radius:8px")
         self.lineEdit_3.setObjectName("lineEdit_3")
         self.lineEdit_4 = QtWidgets.QLineEdit(self.widget_4)
@@ -300,7 +308,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("OPlusSans 3.0")
         self.lineEdit_4.setFont(font)
-        self.lineEdit_4.setStyleSheet("border:1px solid rgb(0,0,0);\n"
+        self.lineEdit_4.setStyleSheet("\n"
 "border-radius:8px")
         self.lineEdit_4.setObjectName("lineEdit_4")
         self.lineEdit_5 = QtWidgets.QLineEdit(self.widget_4)
@@ -308,7 +316,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("OPlusSans 3.0")
         self.lineEdit_5.setFont(font)
-        self.lineEdit_5.setStyleSheet("border:1px solid rgb(0,0,0);\n"
+        self.lineEdit_5.setStyleSheet("\n"
 "border-radius:8px")
         self.lineEdit_5.setObjectName("lineEdit_5")
         self.pushButton_5 = QtWidgets.QPushButton(self.widget_4)
@@ -319,7 +327,6 @@ class Ui_MainWindow(object):
         self.pushButton_5.setStyleSheet("#pushButton_5{\n"
 "    \n"
 "    background-color: rgb(255, 255, 255);\n"
-"    border:2px solid rgb(0,0,0);\n"
 "    border-radius:8px;\n"
 "}")
         self.pushButton_5.setObjectName("pushButton_5")
@@ -327,14 +334,14 @@ class Ui_MainWindow(object):
         self.page_5 = QtWidgets.QWidget()
         self.page_5.setObjectName("page_5")
         self.widget_5 = QtWidgets.QWidget(self.page_5)
-        self.widget_5.setGeometry(QtCore.QRect(70, 10, 331, 251))
+        self.widget_5.setGeometry(QtCore.QRect(70, 10, 321, 251))
         self.widget_5.setObjectName("widget_5")
         self.lineEdit_7 = QtWidgets.QLineEdit(self.widget_5)
         self.lineEdit_7.setGeometry(QtCore.QRect(0, 0, 320, 40))
         font = QtGui.QFont()
         font.setFamily("OPlusSans 3.0")
         self.lineEdit_7.setFont(font)
-        self.lineEdit_7.setStyleSheet("border:1px solid rgb(0,0,0);\n"
+        self.lineEdit_7.setStyleSheet("\n"
 "border-radius:8px")
         self.lineEdit_7.setObjectName("lineEdit_7")
         self.lineEdit_8 = QtWidgets.QLineEdit(self.widget_5)
@@ -342,7 +349,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("OPlusSans 3.0")
         self.lineEdit_8.setFont(font)
-        self.lineEdit_8.setStyleSheet("border:1px solid rgb(0,0,0);\n"
+        self.lineEdit_8.setStyleSheet("\n"
 "border-radius:8px")
         self.lineEdit_8.setObjectName("lineEdit_8")
         self.pushButton_6 = QtWidgets.QPushButton(self.widget_5)
@@ -353,7 +360,6 @@ class Ui_MainWindow(object):
         self.pushButton_6.setStyleSheet("#pushButton_6{\n"
 "    \n"
 "    background-color: rgb(255, 255, 255);\n"
-"    border:2px solid rgb(0,0,0);\n"
 "    border-radius:8px;\n"
 "}")
         self.pushButton_6.setObjectName("pushButton_6")
@@ -371,6 +377,27 @@ class Ui_MainWindow(object):
         font.setPointSize(11)
         self.label_6.setFont(font)
         self.label_6.setObjectName("label_6")
+        self.progressBar_2 = QtWidgets.QProgressBar(self.page_2)
+        self.progressBar_2.setGeometry(QtCore.QRect(0, 4, 1, 466))
+        font = QtGui.QFont()
+        font.setFamily("OPlusSans 3.0")
+        self.progressBar_2.setFont(font)
+        self.progressBar_2.setToolTipDuration(-1)
+        self.progressBar_2.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.progressBar_2.setStyleSheet("QProgressBar { border: 2px; border-radius: 5px; background-color: #b3e5fc; text-align: center;}\n"
+"QProgressBar::chunk{\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #b3e5fc, stop:1 rgb(255, 184, 210));\n"
+"\n"
+"}")
+        self.progressBar_2.setMinimum(0)
+        self.progressBar_2.setMaximum(1)
+        self.progressBar_2.setProperty("value", 1)
+        self.progressBar_2.setTextVisible(False)
+        self.progressBar_2.setOrientation(QtCore.Qt.Vertical)
+        self.progressBar_2.setInvertedAppearance(False)
+        self.progressBar_2.setTextDirection(QtWidgets.QProgressBar.TopToBottom)
+        self.progressBar_2.setFormat("")
+        self.progressBar_2.setObjectName("progressBar_2")
         self.stackedWidget.addWidget(self.page_2)
         self.label_2.raise_()
         self.label.raise_()
@@ -386,7 +413,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(0)
         self.stackedWidget_2.setCurrentIndex(0)
         self.min.clicked.connect(MainWindow.showMinimized)
         self.close_2.clicked.connect(MainWindow.close)
@@ -403,9 +430,9 @@ class Ui_MainWindow(object):
 "\n"
 "欢迎使用寒澈工具箱(*^▽^*)\n"
 "请在左边的工具栏选择你需要的工具。"))
+        self.pushButton_3.setText(_translate("MainWindow", " 刷表情包（连点）"))
         self.pushButton_1.setText(_translate("MainWindow", "刷剪贴板"))
         self.pushButton_2.setText(_translate("MainWindow", "刷指定内容"))
-        self.pushButton_3.setText(_translate("MainWindow", " 刷表情包（连点）"))
         self.lineEdit.setPlaceholderText(_translate("MainWindow", "刷屏次数"))
         self.lineEdit_2.setPlaceholderText(_translate("MainWindow", "停顿时间"))
         self.pushButton_4.setText(_translate("MainWindow", "开始刷屏"))

@@ -109,7 +109,11 @@ border-bottom-right-radius:20px;</string>
      <enum>Qt::LeftToRight</enum>
     </property>
     <property name="styleSheet">
-     <string notr="true">QProgressBar { border: 2px; border-radius: 5px; background-color: #b3e5fc; text-align: center;}QProgressBar::chunk {background:QLinearGradient(x1:0,y1:0,x2:2,y2:0,stop:0 #b3e5fc,stop:1  #f06292); }</string>
+     <string notr="true">QProgressBar { border: 2px; border-radius: 5px; background-color: #b3e5fc; text-align: center;}
+QProgressBar::chunk{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #b3e5fc, stop:1 rgb(255, 184, 210));
+
+}</string>
     </property>
     <property name="minimum">
      <number>0</number>
@@ -138,7 +142,7 @@ border-bottom-right-radius:20px;</string>
      <rect>
       <x>10</x>
       <y>80</y>
-      <width>141</width>
+      <width>140</width>
       <height>470</height>
      </rect>
     </property>
@@ -319,10 +323,10 @@ text-align:left</string>
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>90</y>
-      <width>801</width>
-      <height>451</height>
+      <x>150</x>
+      <y>80</y>
+      <width>821</width>
+      <height>471</height>
      </rect>
     </property>
     <property name="font">
@@ -334,14 +338,14 @@ text-align:left</string>
      <string>线程数</string>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QLabel" name="label_5">
       <property name="geometry">
        <rect>
         <x>100</x>
-        <y>20</y>
+        <y>80</y>
         <width>600</width>
         <height>250</height>
        </rect>
@@ -380,10 +384,10 @@ border-bottom-right-radius:20px;</string>
      <widget class="QWidget" name="widget_2" native="true">
       <property name="geometry">
        <rect>
-        <x>250</x>
-        <y>40</y>
-        <width>330</width>
-        <height>41</height>
+        <x>0</x>
+        <y>0</y>
+        <width>141</width>
+        <height>471</height>
        </rect>
       </property>
       <property name="font">
@@ -391,91 +395,136 @@ border-bottom-right-radius:20px;</string>
         <family>OPlusSans 3.0</family>
        </font>
       </property>
-      <property name="styleSheet">
-       <string notr="true"/>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <property name="spacing">
-        <number>0</number>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,50);
+border:1px;
+border-radius:8px;</string>
+      </property>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="enabled">
+        <bool>true</bool>
        </property>
-       <item>
-        <widget class="QPushButton" name="pushButton_1">
-         <property name="font">
-          <font>
-           <family>OPlusSans 3.0</family>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">#pushButton_1{
-	border:none;
-	border:1px solid rgba(0,0,0,50);
-	border-radius:6px
-}
-#pushButton_1:focus{
-	color:rgb(111,111,111);
-}</string>
-         </property>
-         <property name="text">
-          <string>刷剪贴板</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_2">
-         <property name="font">
-          <font>
-           <family>OPlusSans 3.0</family>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">#pushButton_2{
-	border:none;
-	border:1px solid rgba(0,0,0,50);
-	border-radius:6px
-}
-#pushButton_2:focus{
-	color:rgb(111,111,111);
-}</string>
-         </property>
-         <property name="text">
-          <string>刷指定内容</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_3">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
-         <property name="font">
-          <font>
-           <family>OPlusSans 3.0</family>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">#pushButton_3{
-	border:none;
-	border:1px solid rgba(0,0,0,50);
-	border-radius:6px
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>101</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>OPlusSans 3.0</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_3{
+background-color: rgba(255, 255, 255,75);
+border-radius:6px;
+text-align:left
 }
 #pushButton_3:focus{
 	color:rgb(111,111,111);
 }</string>
-         </property>
-         <property name="text">
-          <string> 刷表情包（连点）</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
+       </property>
+       <property name="text">
+        <string> 刷表情包（连点）</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_1">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>130</y>
+         <width>100</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>OPlusSans 3.0</family>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_1{
+background-color: rgba(255, 255, 255,75);
+border-radius:6px;
+text-align:left
+}
+#pushButton_1:focus{
+	color:rgb(111,111,111);
+}</string>
+       </property>
+       <property name="text">
+        <string>刷剪贴板</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>80</y>
+         <width>100</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>OPlusSans 3.0</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_2{
+	background-color: rgba(255, 255, 255,75);
+	border-radius:6px;
+	text-align:left
+}
+#pushButton_2:focus{
+	color:rgb(111,111,111);
+}</string>
+       </property>
+       <property name="text">
+        <string>刷指定内容</string>
+       </property>
+      </widget>
      </widget>
      <widget class="QStackedWidget" name="stackedWidget_2">
       <property name="geometry">
        <rect>
-        <x>180</x>
-        <y>130</y>
+        <x>210</x>
+        <y>100</y>
         <width>471</width>
-        <height>281</height>
+        <height>321</height>
        </rect>
       </property>
       <property name="font">
@@ -517,7 +566,7 @@ border-bottom-right-radius:20px;</string>
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">border:1px solid rgb(0,0,0);
+          <string notr="true">
 border-radius:8px</string>
          </property>
          <property name="placeholderText">
@@ -539,7 +588,7 @@ border-radius:8px</string>
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">border:1px solid rgb(0,0,0);
+          <string notr="true">
 border-radius:8px</string>
          </property>
          <property name="placeholderText">
@@ -564,7 +613,6 @@ border-radius:8px</string>
           <string notr="true">#pushButton_4{
 	
 	background-color: rgb(255, 255, 255);
-	border:2px solid rgb(0,0,0);
 	border-radius:8px;
 }</string>
          </property>
@@ -580,7 +628,7 @@ border-radius:8px</string>
          <rect>
           <x>70</x>
           <y>10</y>
-          <width>331</width>
+          <width>321</width>
           <height>251</height>
          </rect>
         </property>
@@ -604,7 +652,7 @@ border-radius:8px</string>
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">border:1px solid rgb(0,0,0);
+          <string notr="true">
 border-radius:8px</string>
          </property>
          <property name="placeholderText">
@@ -626,7 +674,7 @@ border-radius:8px</string>
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">border:1px solid rgb(0,0,0);
+          <string notr="true">
 border-radius:8px</string>
          </property>
          <property name="placeholderText">
@@ -648,7 +696,7 @@ border-radius:8px</string>
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">border:1px solid rgb(0,0,0);
+          <string notr="true">
 border-radius:8px</string>
          </property>
          <property name="placeholderText">
@@ -673,7 +721,6 @@ border-radius:8px</string>
           <string notr="true">#pushButton_5{
 	
 	background-color: rgb(255, 255, 255);
-	border:2px solid rgb(0,0,0);
 	border-radius:8px;
 }</string>
          </property>
@@ -689,7 +736,7 @@ border-radius:8px</string>
          <rect>
           <x>70</x>
           <y>10</y>
-          <width>331</width>
+          <width>321</width>
           <height>251</height>
          </rect>
         </property>
@@ -708,7 +755,7 @@ border-radius:8px</string>
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">border:1px solid rgb(0,0,0);
+          <string notr="true">
 border-radius:8px</string>
          </property>
          <property name="placeholderText">
@@ -730,7 +777,7 @@ border-radius:8px</string>
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">border:1px solid rgb(0,0,0);
+          <string notr="true">
 border-radius:8px</string>
          </property>
          <property name="placeholderText">
@@ -755,7 +802,6 @@ border-radius:8px</string>
           <string notr="true">#pushButton_6{
 	
 	background-color: rgb(255, 255, 255);
-	border:2px solid rgb(0,0,0);
 	border-radius:8px;
 }</string>
          </property>
@@ -805,6 +851,58 @@ border-radius:8px</string>
       </property>
       <property name="text">
        <string>线程数：</string>
+      </property>
+     </widget>
+     <widget class="QProgressBar" name="progressBar_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>4</y>
+        <width>1</width>
+        <height>466</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>OPlusSans 3.0</family>
+       </font>
+      </property>
+      <property name="toolTipDuration">
+       <number>-1</number>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QProgressBar { border: 2px; border-radius: 5px; background-color: #b3e5fc; text-align: center;}
+QProgressBar::chunk{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #b3e5fc, stop:1 rgb(255, 184, 210));
+
+}</string>
+      </property>
+      <property name="minimum">
+       <number>0</number>
+      </property>
+      <property name="maximum">
+       <number>1</number>
+      </property>
+      <property name="value">
+       <number>1</number>
+      </property>
+      <property name="textVisible">
+       <bool>false</bool>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="invertedAppearance">
+       <bool>false</bool>
+      </property>
+      <property name="textDirection">
+       <enum>QProgressBar::TopToBottom</enum>
+      </property>
+      <property name="format">
+       <string/>
       </property>
      </widget>
     </widget>
