@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="icons">
+    <file>icons/fkst.png</file>
     <file>icons/sort_FILL0_wght400_GRAD0_opsz24.png</file>
     <file>icons/home_FILL0_wght400_GRAD0_opsz24.png</file>
     <file>icons/close_FILL0_wght400_GRAD0_opsz24.png</file>

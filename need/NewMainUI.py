@@ -203,6 +203,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("OPlusSans 3.0")
         self.pushButton_3.setFont(font)
+        self.pushButton_3.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.pushButton_3.setStyleSheet("#pushButton_3{\n"
 "background-color: rgba(255, 255, 255,75);\n"
 "border-radius:6px;\n"
@@ -211,6 +212,7 @@ class Ui_MainWindow(object):
 "#pushButton_3:focus{\n"
 "    color:rgb(111,111,111);\n"
 "}")
+        self.pushButton_3.setAutoDefault(False)
         self.pushButton_3.setObjectName("pushButton_3")
         self.pushButton_1 = QtWidgets.QPushButton(self.widget_2)
         self.pushButton_1.setGeometry(QtCore.QRect(20, 130, 100, 30))
@@ -365,7 +367,23 @@ class Ui_MainWindow(object):
         self.pushButton_6.setObjectName("pushButton_6")
         self.stackedWidget_2.addWidget(self.page_5)
         self.spinBox = QtWidgets.QSpinBox(self.page_2)
-        self.spinBox.setGeometry(QtCore.QRect(740, 420, 42, 22))
+        self.spinBox.setGeometry(QtCore.QRect(740, 420, 51, 22))
+        self.spinBox.setStyleSheet("QSpinBox {\n"
+"    padding-top: 2px;\n"
+"    padding-bottom: 2px;\n"
+"    padding-left: 4px;\n"
+"    padding-right: 15px;\n"
+"    border: 1px solid rgb(235,235,235);\n"
+"    border-radius: 3px;\n"
+"    /*color: rgb(200,200,200);*/\n"
+"    background-color: rgb(235,235,235);\n"
+"    selection-color: rgb(235,235,235);\n"
+"    selection-background-color: rgb(235,235,235);\n"
+"    font-size: 10pt;\n"
+"}\n"
+"\n"
+"\n"
+"")
         self.spinBox.setMinimum(1)
         self.spinBox.setMaximum(64)
         self.spinBox.setProperty("value", 1)
@@ -399,6 +417,50 @@ class Ui_MainWindow(object):
         self.progressBar_2.setFormat("")
         self.progressBar_2.setObjectName("progressBar_2")
         self.stackedWidget.addWidget(self.page_2)
+        self.page_6 = QtWidgets.QWidget()
+        self.page_6.setObjectName("page_6")
+        self.label_7 = QtWidgets.QLabel(self.page_6)
+        self.label_7.setGeometry(QtCore.QRect(100, 80, 600, 250))
+        font = QtGui.QFont()
+        font.setFamily("OPlusSans 3.0")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setUnderline(False)
+        font.setWeight(75)
+        self.label_7.setFont(font)
+        self.label_7.setStyleSheet("\n"
+"border-top-left-radius:20px;\n"
+"border-bottom-left-radius:20px;\n"
+"border-top-right-radius:20px;\n"
+"border-bottom-right-radius:20px;")
+        self.label_7.setTextFormat(QtCore.Qt.AutoText)
+        self.label_7.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_7.setObjectName("label_7")
+        self.stackedWidget.addWidget(self.page_6)
+        self.fkst_tools = QtWidgets.QPushButton(self.centralwidget)
+        self.fkst_tools.setGeometry(QtCore.QRect(20, 230, 121, 41))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.fkst_tools.sizePolicy().hasHeightForWidth())
+        self.fkst_tools.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("OPlusSans 3.0")
+        font.setPointSize(14)
+        font.setItalic(False)
+        font.setKerning(False)
+        self.fkst_tools.setFont(font)
+        self.fkst_tools.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.fkst_tools.setStyleSheet("background-color: rgba(255, 255, 255,50);\n"
+"border:1px solid rgba(255, 170, 255, 75);\n"
+"border-radius:8px;\n"
+"text-align:left")
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap(":/icons/icons/fkst.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.fkst_tools.setIcon(icon2)
+        self.fkst_tools.setIconSize(QtCore.QSize(36, 36))
+        self.fkst_tools.setCheckable(False)
+        self.fkst_tools.setObjectName("fkst_tools")
         self.label_2.raise_()
         self.label.raise_()
         self.label_4.raise_()
@@ -410,10 +472,11 @@ class Ui_MainWindow(object):
         self.close_2.raise_()
         self.title.raise_()
         self.stackedWidget.raise_()
+        self.fkst_tools.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(2)
         self.stackedWidget_2.setCurrentIndex(0)
         self.min.clicked.connect(MainWindow.showMinimized)
         self.close_2.clicked.connect(MainWindow.close)
@@ -445,4 +508,7 @@ class Ui_MainWindow(object):
         self.pushButton_6.setText(_translate("MainWindow", "开始刷屏"))
         self.spinBox.setWhatsThis(_translate("MainWindow", "线程数"))
         self.label_6.setText(_translate("MainWindow", "线程数："))
+        self.label_7.setText(_translate("MainWindow", "Todo\n"
+"awa"))
+        self.fkst_tools.setText(_translate("MainWindow", "疯狂刷题"))
 import need.NewRes_rc

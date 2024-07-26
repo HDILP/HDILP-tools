@@ -338,7 +338,7 @@ text-align:left</string>
      <string>线程数</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QLabel" name="label_5">
@@ -432,6 +432,9 @@ border-radius:8px;</string>
          <family>OPlusSans 3.0</family>
         </font>
        </property>
+       <property name="focusPolicy">
+        <enum>Qt::ClickFocus</enum>
+       </property>
        <property name="styleSheet">
         <string notr="true">#pushButton_3{
 background-color: rgba(255, 255, 255,75);
@@ -444,6 +447,9 @@ text-align:left
        </property>
        <property name="text">
         <string> 刷表情包（连点）</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
        </property>
       </widget>
       <widget class="QPushButton" name="pushButton_1">
@@ -817,12 +823,30 @@ border-radius:8px</string>
        <rect>
         <x>740</x>
         <y>420</y>
-        <width>42</width>
+        <width>51</width>
         <height>22</height>
        </rect>
       </property>
       <property name="whatsThis">
        <string>线程数</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox {
+    padding-top: 2px;
+    padding-bottom: 2px;
+	padding-left: 4px;
+    padding-right: 15px;
+    border: 1px solid rgb(235,235,235);
+    border-radius: 3px;
+	/*color: rgb(200,200,200);*/
+    background-color: rgb(235,235,235);
+	selection-color: rgb(235,235,235);
+	selection-background-color: rgb(235,235,235);
+	font-size: 10pt;
+}
+
+
+</string>
       </property>
       <property name="minimum">
        <number>1</number>
@@ -906,6 +930,93 @@ QProgressBar::chunk{
       </property>
      </widget>
     </widget>
+    <widget class="QWidget" name="page_6">
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>80</y>
+        <width>600</width>
+        <height>250</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>OPlusSans 3.0</family>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+        <underline>false</underline>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+border-top-left-radius:20px;
+border-bottom-left-radius:20px;
+border-top-right-radius:20px;
+border-bottom-right-radius:20px;</string>
+      </property>
+      <property name="text">
+       <string>Todo
+awa</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="fkst_tools">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>230</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>OPlusSans 3.0</family>
+      <pointsize>14</pointsize>
+      <italic>false</italic>
+      <kerning>false</kerning>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255,50);
+border:1px solid rgba(255, 170, 255, 75);
+border-radius:8px;
+text-align:left</string>
+    </property>
+    <property name="text">
+     <string>疯狂刷题</string>
+    </property>
+    <property name="icon">
+     <iconset resource="NewRes.qrc">
+      <normaloff>:/icons/icons/fkst.png</normaloff>:/icons/icons/fkst.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>36</width>
+      <height>36</height>
+     </size>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
    </widget>
    <zorder>label_2</zorder>
    <zorder>label</zorder>
@@ -918,6 +1029,7 @@ QProgressBar::chunk{
    <zorder>close_2</zorder>
    <zorder>title</zorder>
    <zorder>stackedWidget</zorder>
+   <zorder>fkst_tools</zorder>
   </widget>
  </widget>
  <resources>
