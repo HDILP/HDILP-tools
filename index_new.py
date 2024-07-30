@@ -69,22 +69,6 @@ class MainUi(QMainWindow):
         modules.rollscreen.liandian_thread(thread_num, roll_num, delay_num)
 
 
-def is_float(var):
-    try:
-        float(var)
-        return True
-    except (ValueError, TypeError):
-        return False
-
-
-def is_int(var):
-    try:
-        int(var)
-        return True
-    except (ValueError, TypeError):
-        return False
-
-
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     win = MainUi()
