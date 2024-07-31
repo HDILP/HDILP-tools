@@ -207,7 +207,7 @@ class Ui_MainWindow(object):
         self.pushButton_3.setStyleSheet("#pushButton_3{\n"
 "background-color: rgba(255, 255, 255,75);\n"
 "border-radius:6px;\n"
-"text-align:left\n"
+"\n"
 "}\n"
 "#pushButton_3:focus{\n"
 "    color:rgb(111,111,111);\n"
@@ -224,7 +224,7 @@ class Ui_MainWindow(object):
         self.pushButton_1.setStyleSheet("#pushButton_1{\n"
 "background-color: rgba(255, 255, 255,75);\n"
 "border-radius:6px;\n"
-"text-align:left\n"
+"\n"
 "}\n"
 "#pushButton_1:focus{\n"
 "    color:rgb(111,111,111);\n"
@@ -239,7 +239,7 @@ class Ui_MainWindow(object):
         self.pushButton_2.setStyleSheet("#pushButton_2{\n"
 "    background-color: rgba(255, 255, 255,75);\n"
 "    border-radius:6px;\n"
-"    text-align:left\n"
+"\n"
 "}\n"
 "#pushButton_2:focus{\n"
 "    color:rgb(111,111,111);\n"
@@ -282,11 +282,8 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("OPlusSans 3.0")
         self.pushButton_4.setFont(font)
-        self.pushButton_4.setStyleSheet("#pushButton_4{\n"
-"    \n"
-"    background-color: rgb(255, 255, 255);\n"
-"    border-radius:8px;\n"
-"}")
+        self.pushButton_4.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"border-radius:8px;")
         self.pushButton_4.setObjectName("pushButton_4")
         self.stackedWidget_2.addWidget(self.page_3)
         self.page_4 = QtWidgets.QWidget()
@@ -326,11 +323,8 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("OPlusSans 3.0")
         self.pushButton_5.setFont(font)
-        self.pushButton_5.setStyleSheet("#pushButton_5{\n"
-"    \n"
-"    background-color: rgb(255, 255, 255);\n"
-"    border-radius:8px;\n"
-"}")
+        self.pushButton_5.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"border-radius:8px;")
         self.pushButton_5.setObjectName("pushButton_5")
         self.stackedWidget_2.addWidget(self.page_4)
         self.page_5 = QtWidgets.QWidget()
@@ -359,11 +353,8 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("OPlusSans 3.0")
         self.pushButton_6.setFont(font)
-        self.pushButton_6.setStyleSheet("#pushButton_6{\n"
-"    \n"
-"    background-color: rgb(255, 255, 255);\n"
-"    border-radius:8px;\n"
-"}")
+        self.pushButton_6.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"border-radius:8px;")
         self.pushButton_6.setObjectName("pushButton_6")
         self.stackedWidget_2.addWidget(self.page_5)
         self.spinBox = QtWidgets.QSpinBox(self.page_2)
@@ -460,52 +451,38 @@ class Ui_MainWindow(object):
         font.setFamily("OPlusSans 3.0")
         self.antibanword.setFont(font)
         self.antibanword.setFocusPolicy(QtCore.Qt.ClickFocus)
-        self.antibanword.setStyleSheet("#pushButton_3{\n"
+        self.antibanword.setStyleSheet("#antibanword{\n"
 "background-color: rgba(255, 255, 255,75);\n"
 "border-radius:6px;\n"
-"text-align:left\n"
 "}\n"
-"#pushButton_3:focus{\n"
+"#antibanword:focus{\n"
 "    color:rgb(111,111,111);\n"
 "}")
         self.antibanword.setAutoDefault(False)
         self.antibanword.setObjectName("antibanword")
         self.widget_7 = QtWidgets.QWidget(self.page_6)
-        self.widget_7.setGeometry(QtCore.QRect(150, 10, 661, 451))
+        self.widget_7.setGeometry(QtCore.QRect(140, 0, 671, 461))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.widget_7.sizePolicy().hasHeightForWidth())
         self.widget_7.setSizePolicy(sizePolicy)
         self.widget_7.setObjectName("widget_7")
-        self.conversion = QtWidgets.QPushButton(self.widget_7)
-        self.conversion.setGeometry(QtCore.QRect(180, 400, 301, 51))
+        self.stackedWidget_3 = QtWidgets.QStackedWidget(self.widget_7)
+        self.stackedWidget_3.setGeometry(QtCore.QRect(10, 10, 661, 451))
+        self.stackedWidget_3.setObjectName("stackedWidget_3")
+        self.page_7 = QtWidgets.QWidget()
+        self.page_7.setObjectName("page_7")
+        self.conversion = QtWidgets.QPushButton(self.page_7)
+        self.conversion.setGeometry(QtCore.QRect(170, 410, 301, 51))
         font = QtGui.QFont()
         font.setFamily("OPlusSans 3.0")
         self.conversion.setFont(font)
-        self.conversion.setStyleSheet("#pushButton_4{\n"
-"    \n"
-"    background-color: rgb(255, 255, 255);\n"
-"    border-radius:8px;\n"
-"}")
+        self.conversion.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"border-radius:8px;")
         self.conversion.setObjectName("conversion")
-        self.plainTextEdit = QtWidgets.QPlainTextEdit(self.widget_7)
-        self.plainTextEdit.setGeometry(QtCore.QRect(10, 0, 320, 390))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.plainTextEdit.sizePolicy().hasHeightForWidth())
-        self.plainTextEdit.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("OPlusSans 3.0")
-        self.plainTextEdit.setFont(font)
-        self.plainTextEdit.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.plainTextEdit.setStyleSheet("\n"
-"border-radius:8px")
-        self.plainTextEdit.setCenterOnScroll(False)
-        self.plainTextEdit.setObjectName("plainTextEdit")
-        self.plainTextEdit_2 = QtWidgets.QPlainTextEdit(self.widget_7)
-        self.plainTextEdit_2.setGeometry(QtCore.QRect(340, 0, 320, 390))
+        self.plainTextEdit_2 = QtWidgets.QPlainTextEdit(self.page_7)
+        self.plainTextEdit_2.setGeometry(QtCore.QRect(340, 10, 320, 390))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -514,9 +491,39 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("OPlusSans 3.0")
         self.plainTextEdit_2.setFont(font)
-        self.plainTextEdit_2.setStyleSheet("\n"
-"border-radius:8px")
+        self.plainTextEdit_2.setStyleSheet("QPlainTextEdit {\n"
+"    border-radius: 10px; /* 您可以根据需要调整圆角的大小 */\n"
+"    background-color: rgba(255, 255, 255, 1); /* 示例：白色背景，可按需修改 */\n"
+"    padding: 5px; /* 文本与边框的间距，可选 */\n"
+"}\n"
+"")
         self.plainTextEdit_2.setObjectName("plainTextEdit_2")
+        self.plainTextEdit = QtWidgets.QPlainTextEdit(self.page_7)
+        self.plainTextEdit.setGeometry(QtCore.QRect(10, 10, 320, 390))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.plainTextEdit.sizePolicy().hasHeightForWidth())
+        self.plainTextEdit.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("OPlusSans 3.0")
+        self.plainTextEdit.setFont(font)
+        self.plainTextEdit.setContextMenuPolicy(QtCore.Qt.DefaultContextMenu)
+        self.plainTextEdit.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.plainTextEdit.setStyleSheet("\n"
+"QPlainTextEdit {\n"
+"    border-radius: 10px; /* 您可以根据需要调整圆角的大小 */\n"
+"    background-color: rgba(255, 255, 255, 1); /* 示例：白色背景，可按需修改 */\n"
+"    padding: 5px; /* 文本与边框的间距，可选 */\n"
+"}\n"
+"")
+        self.plainTextEdit.setPlainText("")
+        self.plainTextEdit.setCenterOnScroll(False)
+        self.plainTextEdit.setObjectName("plainTextEdit")
+        self.stackedWidget_3.addWidget(self.page_7)
+        self.page_8 = QtWidgets.QWidget()
+        self.page_8.setObjectName("page_8")
+        self.stackedWidget_3.addWidget(self.page_8)
         self.stackedWidget.addWidget(self.page_6)
         self.fkst_tools = QtWidgets.QPushButton(self.centralwidget)
         self.fkst_tools.setGeometry(QtCore.QRect(20, 230, 121, 41))
@@ -591,7 +598,7 @@ class Ui_MainWindow(object):
         self.label_6.setText(_translate("MainWindow", "线程数："))
         self.antibanword.setText(_translate("MainWindow", "反屏蔽词"))
         self.conversion.setText(_translate("MainWindow", "转换"))
-        self.plainTextEdit.setPlaceholderText(_translate("MainWindow", "转换前文本"))
         self.plainTextEdit_2.setPlaceholderText(_translate("MainWindow", "转换后文本"))
+        self.plainTextEdit.setPlaceholderText(_translate("MainWindow", "转换前文本"))
         self.fkst_tools.setText(_translate("MainWindow", "疯狂刷题"))
 import need.NewRes_rc

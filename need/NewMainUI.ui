@@ -439,7 +439,7 @@ border-radius:8px;</string>
         <string notr="true">#pushButton_3{
 background-color: rgba(255, 255, 255,75);
 border-radius:6px;
-text-align:left
+
 }
 #pushButton_3:focus{
 	color:rgb(111,111,111);
@@ -479,7 +479,7 @@ text-align:left
         <string notr="true">#pushButton_1{
 background-color: rgba(255, 255, 255,75);
 border-radius:6px;
-text-align:left
+
 }
 #pushButton_1:focus{
 	color:rgb(111,111,111);
@@ -513,7 +513,7 @@ text-align:left
         <string notr="true">#pushButton_2{
 	background-color: rgba(255, 255, 255,75);
 	border-radius:6px;
-	text-align:left
+
 }
 #pushButton_2:focus{
 	color:rgb(111,111,111);
@@ -616,11 +616,8 @@ border-radius:8px</string>
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">#pushButton_4{
-	
-	background-color: rgb(255, 255, 255);
-	border-radius:8px;
-}</string>
+          <string notr="true">background-color: rgb(255, 255, 255);
+border-radius:8px;</string>
          </property>
          <property name="text">
           <string>开始刷屏</string>
@@ -724,11 +721,8 @@ border-radius:8px</string>
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">#pushButton_5{
-	
-	background-color: rgb(255, 255, 255);
-	border-radius:8px;
-}</string>
+          <string notr="true">background-color: rgb(255, 255, 255);
+border-radius:8px;</string>
          </property>
          <property name="text">
           <string>开始刷屏</string>
@@ -805,11 +799,8 @@ border-radius:8px</string>
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">#pushButton_6{
-	
-	background-color: rgb(255, 255, 255);
-	border-radius:8px;
-}</string>
+          <string notr="true">background-color: rgb(255, 255, 255);
+border-radius:8px;</string>
          </property>
          <property name="text">
           <string>开始刷屏</string>
@@ -1038,12 +1029,11 @@ border-radius:8px;</string>
         <enum>Qt::ClickFocus</enum>
        </property>
        <property name="styleSheet">
-        <string notr="true">#pushButton_3{
+        <string notr="true">#antibanword{
 background-color: rgba(255, 255, 255,75);
 border-radius:6px;
-text-align:left
 }
-#pushButton_3:focus{
+#antibanword:focus{
 	color:rgb(111,111,111);
 }</string>
        </property>
@@ -1058,10 +1048,10 @@ text-align:left
      <widget class="QWidget" name="widget_7" native="true">
       <property name="geometry">
        <rect>
-        <x>150</x>
-        <y>10</y>
-        <width>661</width>
-        <height>451</height>
+        <x>140</x>
+        <y>0</y>
+        <width>671</width>
+        <height>461</height>
        </rect>
       </property>
       <property name="sizePolicy">
@@ -1070,92 +1060,117 @@ text-align:left
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
-      <widget class="QPushButton" name="conversion">
-       <property name="geometry">
-        <rect>
-         <x>180</x>
-         <y>400</y>
-         <width>301</width>
-         <height>51</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>OPlusSans 3.0</family>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">#pushButton_4{
-	
-	background-color: rgb(255, 255, 255);
-	border-radius:8px;
-}</string>
-       </property>
-       <property name="text">
-        <string>转换</string>
-       </property>
-      </widget>
-      <widget class="QPlainTextEdit" name="plainTextEdit">
+      <widget class="QStackedWidget" name="stackedWidget_3">
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>0</y>
-         <width>320</width>
-         <height>390</height>
+         <y>10</y>
+         <width>661</width>
+         <height>451</height>
         </rect>
        </property>
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="font">
-        <font>
-         <family>OPlusSans 3.0</family>
-        </font>
-       </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">
-border-radius:8px</string>
-       </property>
-       <property name="centerOnScroll">
-        <bool>false</bool>
-       </property>
-       <property name="placeholderText">
-        <string>转换前文本</string>
-       </property>
-      </widget>
-      <widget class="QPlainTextEdit" name="plainTextEdit_2">
-       <property name="geometry">
-        <rect>
-         <x>340</x>
-         <y>0</y>
-         <width>320</width>
-         <height>390</height>
-        </rect>
-       </property>
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="font">
-        <font>
-         <family>OPlusSans 3.0</family>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">
-border-radius:8px</string>
-       </property>
-       <property name="placeholderText">
-        <string>转换后文本</string>
-       </property>
+       <widget class="QWidget" name="page_7">
+        <widget class="QPushButton" name="conversion">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>410</y>
+           <width>301</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>OPlusSans 3.0</family>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);
+border-radius:8px;</string>
+         </property>
+         <property name="text">
+          <string>转换</string>
+         </property>
+        </widget>
+        <widget class="QPlainTextEdit" name="plainTextEdit_2">
+         <property name="geometry">
+          <rect>
+           <x>340</x>
+           <y>10</y>
+           <width>320</width>
+           <height>390</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <family>OPlusSans 3.0</family>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPlainTextEdit {
+    border-radius: 10px; /* 您可以根据需要调整圆角的大小 */
+    background-color: rgba(255, 255, 255, 1); /* 示例：白色背景，可按需修改 */
+    padding: 5px; /* 文本与边框的间距，可选 */
+}
+</string>
+         </property>
+         <property name="placeholderText">
+          <string>转换后文本</string>
+         </property>
+        </widget>
+        <widget class="QPlainTextEdit" name="plainTextEdit">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>320</width>
+           <height>390</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <family>OPlusSans 3.0</family>
+          </font>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::DefaultContextMenu</enum>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+QPlainTextEdit {
+    border-radius: 10px; /* 您可以根据需要调整圆角的大小 */
+    background-color: rgba(255, 255, 255, 1); /* 示例：白色背景，可按需修改 */
+    padding: 5px; /* 文本与边框的间距，可选 */
+}
+</string>
+         </property>
+         <property name="plainText">
+          <string/>
+         </property>
+         <property name="centerOnScroll">
+          <bool>false</bool>
+         </property>
+         <property name="placeholderText">
+          <string>转换前文本</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="page_8"/>
       </widget>
      </widget>
     </widget>

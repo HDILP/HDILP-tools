@@ -4,6 +4,7 @@ from PyQt5.QtWidgets import QMainWindow, QApplication
 from need.NewMainUI import *
 
 import modules.rollscreen
+import modules.AntiBanWord
 
 
 class MainUi(QMainWindow):
@@ -15,6 +16,7 @@ class MainUi(QMainWindow):
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         self.ui.stackedWidget.setCurrentIndex(0)
         self.ui.stackedWidget_2.setCurrentIndex(0)
+        self.ui.stackedWidget_3.setCurrentIndex(0)
 
         self.ui.home.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))
 
@@ -27,6 +29,7 @@ class MainUi(QMainWindow):
         self.ui.pushButton_6.clicked.connect(self.var_to_liandian)
 
         self.ui.fkst_tools.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(2))
+        self.ui.conversion.clicked.connect(self.var_to_AntiBanWord)
 
         self.show()
         # msg_box = QMessageBox(QMessageBox.Information, '提示', '刷剪贴板请提前复制刷屏内容')
@@ -49,6 +52,7 @@ class MainUi(QMainWindow):
         self.m_flag = False
         self.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
 
+    # =========== roll screen ===========
     def var_to_shuajiantieban(self):
         thread_num = self.ui.spinBox.value()
         roll_num = self.ui.lineEdit.text()
@@ -67,6 +71,15 @@ class MainUi(QMainWindow):
         roll_num = self.ui.lineEdit_7.text()
         delay_num = self.ui.lineEdit_8.text()
         modules.rollscreen.liandian_thread(thread_num, roll_num, delay_num)
+
+    # ===================================
+
+    # ========== anti ban word ==========
+    def var_to_AntiBanWord(self):
+        before_conversion_word = self.ui.plainTextEdit.toPlainText()
+        print(before_conversion_word)
+        after_conversion_text = modules.AntiBanWord.conversion(before_conversion_word)
+        self.ui.plainTextEdit_2.setPlainText(after_conversion_text)
 
 
 if __name__ == '__main__':
