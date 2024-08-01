@@ -517,7 +517,6 @@ class Ui_MainWindow(object):
 "    padding: 5px; /* 文本与边框的间距，可选 */\n"
 "}\n"
 "")
-        self.plainTextEdit.setPlainText("")
         self.plainTextEdit.setCenterOnScroll(False)
         self.plainTextEdit.setObjectName("plainTextEdit")
         self.stackedWidget_3.addWidget(self.page_7)

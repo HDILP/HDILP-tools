@@ -81,6 +81,8 @@ class MainUi(QMainWindow):
         after_conversion_text = modules.AntiBanWord.conversion(before_conversion_word)
         self.ui.plainTextEdit_2.setPlainText(after_conversion_text)
 
+    # ===================================
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

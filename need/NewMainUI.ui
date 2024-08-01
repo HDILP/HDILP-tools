@@ -1159,9 +1159,6 @@ QPlainTextEdit {
 }
 </string>
          </property>
-         <property name="plainText">
-          <string/>
-         </property>
          <property name="centerOnScroll">
           <bool>false</bool>
          </property>

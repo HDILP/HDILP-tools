@@ -1,0 +1,1 @@
+nuitka --standalone --mingw64 --show-memory --show-progress --enable-plugin=pyqt5,upx --upx-binary=./upx-4.2.4-win64/upx.exe --output-dir=out --windows-disable-console --windows-icon-from-ico=icon.ico --onefile index_new.py
