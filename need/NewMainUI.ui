@@ -1044,6 +1044,48 @@ border-radius:6px;
         <bool>false</bool>
        </property>
       </widget>
+      <widget class="QPushButton" name="getpostpicture">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>80</y>
+         <width>101</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>OPlusSans 3.0</family>
+        </font>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::ClickFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#getpostpicture{
+background-color: rgba(255, 255, 255,75);
+border-radius:6px;
+}
+#getpostpicture:focus{
+	color:rgb(111,111,111);
+}</string>
+       </property>
+       <property name="text">
+        <string>提取文章图片</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
      </widget>
      <widget class="QWidget" name="widget_7" native="true">
       <property name="geometry">
@@ -1068,6 +1110,9 @@ border-radius:6px;
          <width>661</width>
          <height>451</height>
         </rect>
+       </property>
+       <property name="currentIndex">
+        <number>1</number>
        </property>
        <widget class="QWidget" name="page_7">
         <widget class="QPushButton" name="conversion">
@@ -1167,7 +1212,363 @@ QPlainTextEdit {
          </property>
         </widget>
        </widget>
-       <widget class="QWidget" name="page_8"/>
+       <widget class="QWidget" name="page_8">
+        <widget class="QPlainTextEdit" name="plainTextEdit_3">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>30</y>
+           <width>601</width>
+           <height>91</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPlainTextEdit {
+    border-radius: 10px; /* 您可以根据需要调整圆角的大小 */
+    background-color: rgba(255, 255, 255, 1); /* 示例：白色背景，可按需修改 */
+    padding: 5px; /* 文本与边框的间距，可选 */
+}</string>
+         </property>
+         <property name="placeholderText">
+          <string>请输入文章分享链接</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="pic">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>130</y>
+           <width>75</width>
+           <height>100</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>1</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="pic_2">
+         <property name="geometry">
+          <rect>
+           <x>80</x>
+           <y>130</y>
+           <width>75</width>
+           <height>100</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>2</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="pic_3">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>130</y>
+           <width>75</width>
+           <height>100</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>3</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="pic_4">
+         <property name="geometry">
+          <rect>
+           <x>240</x>
+           <y>130</y>
+           <width>75</width>
+           <height>100</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>4</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="pic_5">
+         <property name="geometry">
+          <rect>
+           <x>320</x>
+           <y>130</y>
+           <width>75</width>
+           <height>100</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>5</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="pic_6">
+         <property name="geometry">
+          <rect>
+           <x>400</x>
+           <y>130</y>
+           <width>75</width>
+           <height>100</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>6</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="pic_7">
+         <property name="geometry">
+          <rect>
+           <x>480</x>
+           <y>130</y>
+           <width>75</width>
+           <height>100</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>7</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="pic_8">
+         <property name="geometry">
+          <rect>
+           <x>560</x>
+           <y>130</y>
+           <width>75</width>
+           <height>100</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>8</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="pic_9">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>260</y>
+           <width>75</width>
+           <height>100</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>9</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>230</y>
+           <width>20</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox_2">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>230</y>
+           <width>20</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox_3">
+         <property name="geometry">
+          <rect>
+           <x>190</x>
+           <y>230</y>
+           <width>20</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox_4">
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>230</y>
+           <width>20</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox_5">
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>230</y>
+           <width>20</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox_6">
+         <property name="geometry">
+          <rect>
+           <x>430</x>
+           <y>230</y>
+           <width>20</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox_7">
+         <property name="geometry">
+          <rect>
+           <x>510</x>
+           <y>230</y>
+           <width>20</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox_8">
+         <property name="geometry">
+          <rect>
+           <x>590</x>
+           <y>230</y>
+           <width>20</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox_9">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>360</y>
+           <width>20</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton">
+         <property name="geometry">
+          <rect>
+           <x>240</x>
+           <y>380</y>
+           <width>150</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);
+border-radius:8px;</string>
+         </property>
+         <property name="text">
+          <string>下载</string>
+         </property>
+        </widget>
+       </widget>
       </widget>
      </widget>
     </widget>
