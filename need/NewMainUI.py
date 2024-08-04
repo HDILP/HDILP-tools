@@ -665,11 +665,11 @@ class Ui_MainWindow(object):
         self.checkBox_9.setSizePolicy(sizePolicy)
         self.checkBox_9.setText("")
         self.checkBox_9.setObjectName("checkBox_9")
-        self.pushButton = QtWidgets.QPushButton(self.page_8)
-        self.pushButton.setGeometry(QtCore.QRect(240, 380, 150, 50))
-        self.pushButton.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+        self.Download_pics = QtWidgets.QPushButton(self.page_8)
+        self.Download_pics.setGeometry(QtCore.QRect(240, 380, 150, 50))
+        self.Download_pics.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "border-radius:8px;")
-        self.pushButton.setObjectName("pushButton")
+        self.Download_pics.setObjectName("Download_pics")
         self.stackedWidget_3.addWidget(self.page_8)
         self.stackedWidget.addWidget(self.page_6)
         self.fkst_tools = QtWidgets.QPushButton(self.centralwidget)
@@ -759,6 +759,6 @@ class Ui_MainWindow(object):
         self.pic_7.setText(_translate("MainWindow", "7"))
         self.pic_8.setText(_translate("MainWindow", "8"))
         self.pic_9.setText(_translate("MainWindow", "9"))
-        self.pushButton.setText(_translate("MainWindow", "下载"))
+        self.Download_pics.setText(_translate("MainWindow", "下载"))
         self.fkst_tools.setText(_translate("MainWindow", "疯狂刷题"))
 import need.NewRes_rc

@@ -5,6 +5,7 @@ from need.NewMainUI import *
 
 import modules.rollscreen
 import modules.AntiBanWord
+import modules.GetPostPix
 
 
 class MainUi(QMainWindow):
@@ -29,7 +30,10 @@ class MainUi(QMainWindow):
         self.ui.pushButton_6.clicked.connect(self.var_to_liandian)
 
         self.ui.fkst_tools.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(2))
+        self.ui.antibanword.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentIndex(0))
+        self.ui.getpostpicture.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentIndex(1))
         self.ui.conversion.clicked.connect(self.var_to_AntiBanWord)
+        self.ui.Download_pics.clicked.connect(self.var_to_GetPostPix)
 
         self.show()
         # msg_box = QMessageBox(QMessageBox.Information, '提示', '刷剪贴板请提前复制刷屏内容')
@@ -72,8 +76,6 @@ class MainUi(QMainWindow):
         delay_num = self.ui.lineEdit_8.text()
         modules.rollscreen.liandian_thread(thread_num, roll_num, delay_num)
 
-    # ===================================
-
     # ========== anti ban word ==========
     def var_to_AntiBanWord(self):
         before_conversion_word = self.ui.plainTextEdit.toPlainText()
@@ -81,7 +83,10 @@ class MainUi(QMainWindow):
         after_conversion_text = modules.AntiBanWord.conversion(before_conversion_word)
         self.ui.plainTextEdit_2.setPlainText(after_conversion_text)
 
-    # ===================================
+    # ======== get post picture =========
+    def var_to_GetPostPix(self):
+        post_url = self.ui.plainTextEdit_3.toPlainText()
+        pics = modules.GetPostPix.getPostPix(post_url)
 
 
 if __name__ == '__main__':
