@@ -1,3 +1,4 @@
+#coding=utf-8
 import re
 import requests
 import os
@@ -5,39 +6,53 @@ import os
 
 def getPostPix(url):
     app_name = "HDILP-tools"
-    if os.name == 'nt':  # 'nt' ��ʾWindows
-        cache_dir = os.path.join(os.getenv('LOCALAPPDATA'), app_name, 'Cache')
-    elif os.name == 'posix':  # 'posix' ͨ��ָLinux��macOS
+    if os.name == 'nt':  # 'nt' 表示Windows
+        cache_dir = os.path.join(os.environ['tmp'], app_name)
+    elif os.name == 'posix':  # 'posix' 通常指Linux或macOS
         cache_dir = os.path.join(os.path.expanduser("~"), ".cache", app_name)
-    # ȷ��Ŀ¼����
+    # 确保目录存在
     if not os.path.exists(cache_dir):
         os.makedirs(cache_dir)
-    # Ȼ������ڴ�Ŀ¼�´�������ȡ��ɾ�������ļ�
+    # 然后可以在此目录下创建、读取或删除缓存文件
 
     code = requests.get(url).text
-    pics = []
+    pics_url = []
+    locale_path = []
     try:
         pictures = (re.findall(r'<img class="fill-img" src="(.*?)">', code))
         for i in pictures:
             i.replace('http', 'https')
-            pics.append(i)
-        #
-        # for i, url in zip(uids, logo_url):  # ����uids��logo_url������ͬ��һһ��Ӧ
-        #     response = requests.get(url)
-        #     if response.status_code == 200:
-        #         file_path = f"./source/avatar/{i}.jpg"
-        #         with open(file_path, 'wb') as f:
-        #             f.write(response.content)
-        #         print(f"ͼƬ�ѳɹ������� {file_path}")
-        #     else:
-        #         print(f"ΪUID {i} ����ͼƬʧ�ܣ�HTTP״̬�룺{response.status_code}")
-        #
-        return pics
+            pics_url.append(i)
 
+        for url in pics_url:
+            response = requests.get(url)
+            if response.status_code == 200:
+                name = re.findall("/../../(.*?)\.", url)[0]
+                file_path = os.path.join(cache_dir, f"{name}.jpg")
+                with open(file_path, 'wb') as f:
+                    f.write(response.content)
+                print(url)
+                print(f"图片已成功保存至 {file_path}")
+                locale_path.append(file_path)
+            else:
+                print(f"为UID {i} 下载图片失败，HTTP状态码：{response.status_code}")
+        return locale_path
 
     except:
         pictures = (re.findall(r"<img src='(.*?)'>", code))
         for i in pictures:
-            i.replace('http', 'https')
-            pics.append(i)
-        return pics
+            i = i.replace('http', 'https')
+            pics_url.append(i)
+
+        for url in pics_url:
+            response = requests.get(url)
+            if response.status_code == 200:
+                name = re.findall("/../../(.*?)\.", url)[0]
+                file_path = os.path.join(cache_dir, f"{name}.jpg")
+                with open(file_path, 'wb') as f:
+                    f.write(response.content)
+                print(f"图片已成功保存至 {file_path}")
+                locale_path.append(file_path)
+            else:
+                print(f"为UID {i} 下载图片失败，HTTP状态码：{response.status_code}")
+        return locale_path

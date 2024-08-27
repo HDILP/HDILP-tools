@@ -1233,7 +1233,7 @@ QPlainTextEdit {
           <string>请输入文章分享链接</string>
          </property>
         </widget>
-        <widget class="QLabel" name="pic">
+        <widget class="QLabel" name="pic_1">
          <property name="geometry">
           <rect>
            <x>0</x>

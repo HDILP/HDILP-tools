@@ -1,6 +1,8 @@
 import sys
 
 from PyQt5.QtWidgets import QMainWindow, QApplication
+from PyQt5.QtGui import QPixmap
+from PyQt5.QtCore import Qt
 from need.NewMainUI import *
 
 import modules.rollscreen
@@ -86,7 +88,20 @@ class MainUi(QMainWindow):
     # ======== get post picture =========
     def var_to_GetPostPix(self):
         post_url = self.ui.plainTextEdit_3.toPlainText()
-        pics = modules.GetPostPix.getPostPix(post_url)
+        pics_path = modules.GetPostPix.getPostPix(post_url)
+
+        for i, path in enumerate(pics_path, start=1):
+            pic = QPixmap(path).scaled(70, 100, Qt.KeepAspectRatio)
+            
+            # 更新对应的图片控件
+            # 直接使用getattr来获取对应的图片控件
+            pic_control = getattr(self.ui, f"pic_{i}", None)
+            print(pic_control)
+            if pic_control is not None:
+                pic_control.setPixmap(pic)
+
+
+
 
 
 if __name__ == '__main__':
