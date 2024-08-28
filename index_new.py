@@ -1,6 +1,6 @@
-import sys
+import sys, os
 
-from PyQt5.QtWidgets import QMainWindow, QApplication
+from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtCore import Qt
 from need.NewMainUI import *
@@ -35,7 +35,8 @@ class MainUi(QMainWindow):
         self.ui.antibanword.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentIndex(0))
         self.ui.getpostpicture.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentIndex(1))
         self.ui.conversion.clicked.connect(self.var_to_AntiBanWord)
-        self.ui.Download_pics.clicked.connect(self.var_to_GetPostPix)
+        self.ui.Download_pics.clicked.connect(self.get_post_pictures)
+        self.ui.Save_pics.clicked.connect(self.save_pictures)
 
         self.show()
         # msg_box = QMessageBox(QMessageBox.Information, '提示', '刷剪贴板请提前复制刷屏内容')
@@ -86,23 +87,54 @@ class MainUi(QMainWindow):
         self.ui.plainTextEdit_2.setPlainText(after_conversion_text)
 
     # ======== get post picture =========
-    def var_to_GetPostPix(self):
-        post_url = self.ui.plainTextEdit_3.toPlainText()
-        pics_path = modules.GetPostPix.getPostPix(post_url)
-
-        for i, path in enumerate(pics_path, start=1):
-            pic = QPixmap(path).scaled(70, 100, Qt.KeepAspectRatio)
+    def get_post_pictures(self):
+        post_url = self.ui.plainTextEdit_3.toPlainText()  # 获取输入文章链接
+        self.pics_path = modules.GetPostPix.getPostPix(post_url)
+        
+        # 确保 pics_path 是列表类型
+        if not isinstance(self.pics_path, list):
+            print("获取到的图片路径不是一个列表")
+            return
+        
+        if not self.pics_path:
+            print("没有找到图片路径")
+            return
+        
+        self.ui.Save_pics.setEnabled(True)
             
+        for i, path in enumerate(self.pics_path, start=1):
+            pic = QPixmap(path).scaled(70, 100, Qt.KeepAspectRatio)
             # 更新对应的图片控件
             # 直接使用getattr来获取对应的图片控件
             pic_control = getattr(self.ui, f"pic_{i}", None)
-            print(pic_control)
-            if pic_control is not None:
+            checker_control = getattr(self.ui, f"checkBox_{i}", None)
+            
+            if pic_control is not None and checker_control is not None:
                 pic_control.setPixmap(pic)
+                checker_control.setCheckable(True)
+                self.ui.Save_pics.setEnabled(True)
 
-
-
-
+    def save_pictures(self):
+        save_path = QFileDialog.getExistingDirectory(self,
+                                                    "选择存放图片的文件夹",
+                                                    os.getcwd())
+        # 避免 TypeError
+        if not isinstance(self.pics_path, list):
+            print("pics_path 不是列表类型")
+            return
+        
+        try:
+            # 避免 IndexError
+            for i in range(len(self.pics_path)):
+                checker_control = getattr(self.ui, f"checkBox_{i + 1}", None)
+                if checker_control is not None and checker_control.isChecked():
+                    modules.GetPostPix.copyPix(self.pics_path[i], save_path)
+                    print(f"图片 {i + 1} 已保存到 {save_path}")
+        except IndexError:
+            print("列表索引越界")
+        except Exception as e:
+            print(f"保存图片时发生错误: {e}")
+    
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
