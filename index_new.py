@@ -1,8 +1,8 @@
-import sys, os
+import sys, os, shutil
 
-from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog
+from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog, QMessageBox
 from PyQt5.QtGui import QPixmap
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import Qt, pyqtSlot
 from need.NewMainUI import *
 
 import modules.rollscreen
@@ -10,13 +10,21 @@ import modules.AntiBanWord
 import modules.GetPostPix
 
 
-class MainUi(QMainWindow):
+class MainUi(QMainWindow, QApplication):
     def __init__(self):
         super().__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
-        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+
+        self.initUI()
+        modules.GetPostPix.mkCacheDir()  # 创建缓存文件夹
+        
+        self.show()
+    
+    def initUI(self):
+        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)  # 去掉标题栏
+        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)  # 设置窗口背景透明
+
         self.ui.stackedWidget.setCurrentIndex(0)
         self.ui.stackedWidget_2.setCurrentIndex(0)
         self.ui.stackedWidget_3.setCurrentIndex(0)
@@ -38,23 +46,20 @@ class MainUi(QMainWindow):
         self.ui.Download_pics.clicked.connect(self.get_post_pictures)
         self.ui.Save_pics.clicked.connect(self.save_pictures)
 
-        self.show()
-        # msg_box = QMessageBox(QMessageBox.Information, '提示', '刷剪贴板请提前复制刷屏内容')
-        # msg_box.exec_()
-        # TODO：把提示写进UI里
-
+    @pyqtSlot()
+    def on_about_to_quit(self):
+        # 在应用程序即将退出时执行清理工作
+        modules.GetPostPix.cleanUp()
     def mousePressEvent(self, event):
         if event.button() == QtCore.Qt.LeftButton and self.isMaximized() == False:
             self.m_flag = True
             self.m_Position = event.globalPos() - self.pos()  # 获取鼠标相对窗口的位置
             event.accept()
             # self.setCursor(QtGui.QCursor(QtCore.Qt.OpenHandCursor))  # 更改鼠标图标
-
     def mouseMoveEvent(self, mouse_event):
         if QtCore.Qt.LeftButton and self.m_flag:
             self.move(mouse_event.globalPos() - self.m_Position)  # 更改窗口位置
             mouse_event.accept()
-
     def mouseReleaseEvent(self, mouse_event):
         self.m_flag = False
         self.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
@@ -91,18 +96,9 @@ class MainUi(QMainWindow):
         post_url = self.ui.plainTextEdit_3.toPlainText()  # 获取输入文章链接
         self.pics_path = modules.GetPostPix.getPostPix(post_url)
         
-        # 确保 pics_path 是列表类型
-        if not isinstance(self.pics_path, list):
-            print("获取到的图片路径不是一个列表")
-            return
-        
-        if not self.pics_path:
-            print("没有找到图片路径")
-            return
-        
         self.ui.Save_pics.setEnabled(True)
             
-        for i, path in enumerate(self.pics_path, start=1):
+        for i, path in enumerate(self.pics_path, start=1): # type: ignore
             pic = QPixmap(path).scaled(70, 100, Qt.KeepAspectRatio)
             # 更新对应的图片控件
             # 直接使用getattr来获取对应的图片控件
@@ -130,6 +126,8 @@ class MainUi(QMainWindow):
                 if checker_control is not None and checker_control.isChecked():
                     modules.GetPostPix.copyPix(self.pics_path[i], save_path)
                     print(f"图片 {i + 1} 已保存到 {save_path}")
+                    msg_box = QMessageBox(QMessageBox.Information, '提示', f"图片 {i + 1} 已保存到 {save_path}")
+                    msg_box.exec_()
         except IndexError:
             print("列表索引越界")
         except Exception as e:
@@ -139,4 +137,5 @@ class MainUi(QMainWindow):
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     win = MainUi()
+    app.aboutToQuit.connect(win.on_about_to_quit)
     sys.exit(app.exec_())
